@@ -73,6 +73,7 @@ let futanari = (ch == true ? false : true)
 let girlsolo = (ch == true ? false : true)
 let hentai = (ch == true ? false : true)
 let holo = (ch == true ? false : false)
+let jahy = (ch == true ? false : true)
 let kitsune = (ch == true ? false : true)
 let kuni = (ch == true ? false : true)
 let loli = (ch == true ? false : true)
@@ -131,6 +132,7 @@ const sections = [
 	//{title: `${ girlsolo == true ? p:f}` + "G • Girl Solo", rowId: ".nsfw girlsolo"},
 	{title: `${ hentai == true ? p:f}` + "H • Hentai", rowId: ".nsfw hentai"},
 	{title: `${ holo == true ? p:f}` + "H • Holo", rowId: ".nsfw holo"},
+	{title: `${ jahy == true ? p:f}` + "J • Jahy", rowId: ".nsfw jahy"},
 	//{title: `${ kitsune == true ? p:f}` + "K • Kitsune", rowId: ".nsfw kitsune"},
 	//{title: `${ kuni == true ? p:f}` + "K • Kuni", rowId: ".nsfw kuni"},
 	{title: `${ loli == true ? p:f}` + "L • Loli", rowId: ".nsfw loli"},
@@ -165,6 +167,7 @@ const listMessage = {
 
 
 //------------ CASE NSFW ! ------------
+
   try {
     if (/(nsfw|hentai)/i.test(command)) {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -301,6 +304,13 @@ case 'holo':
 	     if (db.data.users[m.sender].premiumTime < 1) return conn.sendButton(m.chat, txtprem, botdate, [['ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', '.premium'],['ᴏᴡɴᴇʀ', '.owner nomor']], m)
 		 }
           conn.sendButton(m.chat, tekk, fot, await(await fetch(res + 'hololewd' + api)).buffer(), [[next, `${usedPrefix}nsfw ${args[0]}`]],m)
+            break
+            
+case 'jahy':
+         if (jahy == true) { 
+	     if (db.data.users[m.sender].premiumTime < 1) return conn.sendButton(m.chat, txtprem, botdate, [['ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', '.premium'],['ᴏᴡɴᴇʀ', '.owner nomor']], m)
+		 }
+          conn.sendButton(m.chat, tekk, fot, await(await fetch(xres + 'jahy' + xapi)).buffer(), [[next, `${usedPrefix}nsfw ${args[0]}`]],m)
             break
             
 case 'kitsune':
@@ -455,6 +465,7 @@ default:
        } catch (err) {
                       m.reply("Error\n\n\n" + err.stack)
       }
+      
 //-----------------------------
 
 }
