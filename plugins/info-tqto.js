@@ -36,9 +36,19 @@ https://github.com/Ameliascrf
 https://github.com/Fokusdotid
 *❉ Johannes:*
 https://github.com/Johannes2803
+*❉ BrunoSobrino:*
+https://github.com/BrunoSobrino
+*❉ Krisna:*
+https://github.com/NevtBotz
+*❉ LitRHap:*
+https://github.com/LitRHap
 *▸ - - - —「 KANG RECODE 」— - - - ◂
 *❉ Fahri:*
 https://github.com/FahriAdison
+*▸ - - - —「 SPESIAL HELPER 」— - - - ◂
+*❉ Kannachan:*
+*❉ Johannes:*
+*❉ Krisna:*
 `
 m.reply(tqto)
 }

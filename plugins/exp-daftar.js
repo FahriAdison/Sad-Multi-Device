@@ -1,5 +1,7 @@
 import { createHash } from 'crypto'
+import fetch from 'node-fetch'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
+
 let handler = async function (m, { text, usedPrefix, command }) {
 	function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
@@ -47,16 +49,16 @@ let handler = async function (m, { text, usedPrefix, command }) {
 ]
 
 const listMessage = {
-  text: `Please select your age at the bottom button...\n*Your Name:* ${conn.getName(m.sender)}\nWant a costume name? type *${usedPrefix + command} yourname.age*`,
-  footer: global.wm,
-  title: "━━━━「 Registration 」━━━━",
+  text: `│›Please select your age at the bottom button...`,
+  footer: `┗ *ʏᴏᴜʀ ɴᴀᴍᴇ:* ${conn.getName(m.sender)}\n<❔> Want a costume name? type *${usedPrefix + command} yourname.age*`,
+  title: "▢- - - - - ʀᴇɢɪsᴛᴇʀ - - - - -",
   buttonText: "Click Here !",
   sections
 }
 
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `[💬] Kamu sudah terdaftar\nMau daftar ulang? *${usedPrefix}unreg <SERIAL NUMBER>*`
-  if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, m)
+  if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, { quoted: m })
   let [_, name, splitter, age] = text.match(Reg)
   if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
   if (!age) throw 'Umur tidak boleh kosong (Angka)'
@@ -69,15 +71,41 @@ const listMessage = {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender
-  m.reply(`
-━━━━ 「 *Successful Registration* 」━━━━
+  let cap = `
+┏─• *ᴜsᴇʀs*
+│▸ *sᴛᴀᴛᴜs:* ☑️ sᴜᴄᴄᴇssғᴜʟ
+│▸ *ɴᴀᴍᴇ:* ${name}
+│▸ *ᴀɢᴇ:* ${age} ʏᴇᴀʀs
+│▸ *sɴ:* ${sn}
+┗────···
 
-╭─• 〘 INFO 〙
-│✧ *Name:* ${name}
-│✧ *Age:* ${age} Years
-│✧ *Sn:* ${sn}
-▣──────···
-`.trim())
+ᴅᴀᴛᴀ ᴜsᴇʀ ʏᴀɴɢ ᴛᴇʀsɪᴍᴘᴀɴ ᴅɪᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ, ᴅɪᴊᴀᴍɪɴ ᴀᴍᴀɴ ᴛᴀɴᴘᴀ ᴛᴇʀsʜᴀʀᴇ (. ❛ ᴗ ❛.)
+`
+  let buttonMessage= {
+'document':{'url':sgc},
+'mimetype':global.ddocx,
+'fileName':'- - - - - ʀᴇɢɪsᴛᴇʀ - - - - -',
+'fileLength':fsizedoc,
+'pageCount':fpagedoc,
+'contextInfo':{
+'forwardingScore':555,
+'isForwarded':true,
+'externalAdReply':{
+'mediaUrl':global.sig,
+'mediaType':2,
+'previewType':'pdf',
+'title':global.titlebot,
+'body':global.titlebot,
+'thumbnail':await(await fetch('https://telegra.ph/file/4a7e5f18efaadec18a7a0.jpg')).buffer(),
+'sourceUrl':sgc}},
+'caption':cap,
+'footer':botdate,
+'buttons':[
+{'buttonId':'.menu','buttonText':{'displayText':'ᴍᴇɴᴜ'},'type':1},
+{'buttonId':'.donasi','buttonText':{'displayText':'ᴅᴏɴᴀsɪ'},'type':1}
+],
+'headerType':6}
+    await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['xp']

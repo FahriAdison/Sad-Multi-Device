@@ -35,6 +35,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
+      let vn = './media/tante-tante.mp3'
     let uptime = clockString(_uptime)
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
@@ -85,6 +86,10 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     // const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './src/avatar_contact.png')
     // if (m.isGroup) return conn.sendButton(m.chat, text.trim(), conn.getName(conn.user.jid), pp, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
     conn.sendHydrated(m.chat, text.trim(), '                「 ꜱᴀᴅ BOT あ⁩ 」', await genProfile(conn, m), 'https://github.com/FahriAdison', 'Github', null, null, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
+      conn.sendFile(m.chat, vn, 'dj1.mp3', null, m, true, {
+type: 'audioMessage', 
+ptt: true 
+})
    // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: await conn.getName(conn.user.jid) , templateButtons: [{ quickReplyButton: { displayText: 'Speedtest', id: `${_p}ping` }}, { quickReplyButton: { displayText: 'Owner', id: `${_p}owner` }} ] })
      //conn.sendButton(m.chat, text.trim(), conn.user.name, await genProfile(conn, m), [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
   } catch (e) {
@@ -97,6 +102,7 @@ handler.tags = ['general']
 handler.alias = ['menu', 'help']
 handler.command = /^(menu|help|\?)$/i
 handler.exp = 3
+handler.register = true
 
 export default handler
 
