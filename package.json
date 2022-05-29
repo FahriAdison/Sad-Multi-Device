@@ -1,6 +1,6 @@
 {
-    "name": "games-wabot",
-    "version": "0.9.86",
+    "name": "Sad-Bot",
+    "version": "1.0.1",
     "description": "Customizable WhatsApp Bot",
     "main": "index.js",
     "type": "module",
@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/BochilGaming/games-wabot",
+    "homepage": "https://github.com/FahriAdison/Sad-Multi-Device",
     "author": {
-        "name": "BochilGaming"
+        "name": "Papah-Chan"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BochilGaming/games-wabot.git"
+        "url": "git+https://github.com/FahriAdison/Sad-Multi-Device.git"
     },
     "bugs": {
-        "url": "https://github.com/BochilGaming/games-wabot/issues"
+        "url": "https://github.com/FahriAdison/Sad-Multi-Device/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
