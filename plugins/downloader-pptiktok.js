@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args, text }) => {
 if (!text) throw '*[❗INFO❗] Masukan Nama User Tiktok Yang Ingin Diambil Fotonya*'
-let res = `https://api.lolhuman.xyz/api/pptiktok/${text}?apikey=Papah-Chan`
+let res = `https://api.lolhuman.xyz/api/pptiktok/${text}?apikey=YourApikey`
 conn.sendFile(m.chat, res, 'error.jpg', `*[ ✔ ] Sukses Mengambil Foto User ${text}*`, m, false)
 }
 handler.help = ['tiktokfoto'].map(v => v + ' <username>')
