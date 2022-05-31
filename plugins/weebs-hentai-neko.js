@@ -1,8 +1,8 @@
-//   •-- MADE BY --•
-//   | Letta - Sama ! 💗🐰
+//   •-- MADE & HELP BY --•
+//   | Letta - Sama & Papah-Chan ! 💗🐰
 //   •-------------•
 // CREDITS ! JANGAN DIUBAH, JANGAN DIHAPUS !!
-
+// Note: Ubah Apikey Di Config.js
 
 //------ FUNCTION & MODULE
 function pickRandom(list) {
@@ -26,16 +26,16 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 //---------------------SOURCE
 
 //> Default
-let res = 'https://api.lolhuman.xyz/api/random/nsfw/'
-let api = '?apikey=YourApikey'
+let res = `https://api.lolhuman.xyz/api/random/nsfw/`
+let api = `?apikey=${lolkey}`
 
 //> Lolhuman
-let resl = 'https://api.lolhuman.xyz/api/random2/'
-let apil = '?apikey=YourApikey'
+let resl = `https://api.lolhuman.xyz/api/random2/`
+let apil = `?apikey=${lolkey}`
 
 //> Xteam
-let xres = 'https://api.xteam.xyz/randomimage/'
-let xapi = '?APIKEY=YourApikey'
+let xres = `https://api.xteam.xyz/randomimage/`
+let xapi = `?APIKEY=${xkey}`
 //--------------------------------
 
 // ••••••••••••••••• OPTIONS •••••••••••
