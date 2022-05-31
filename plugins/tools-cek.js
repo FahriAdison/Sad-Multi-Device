@@ -1,7 +1,7 @@
 // https://github.com/Nobuyaki
 // Jangan Hapus link githubnya bang :)
 
-import { fetch } from 'node-fetch'
+import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
