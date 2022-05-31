@@ -6,3 +6,5 @@ coba module dibawah ini
 
 module:
 https://www.mediafire.com/file/hqbc0vyvpuu4vn2/archive-2022-05-28T091926Z.tar.gz/file
+
+NOTE: UBAH APIKEY DI CONFIG.JS
