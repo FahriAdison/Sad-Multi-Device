@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     // const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './src/avatar_contact.png')
     // if (m.isGroup) return conn.sendButton(m.chat, text.trim(), conn.getName(conn.user.jid), pp, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
-    conn.sendHydrated(m.chat, text.trim(), '                「 ꜱᴀᴅ BOT あ⁩ 」', await genProfile(conn, m), 'https://github.com/FahriAdison', 'Github', null, null, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
+    conn.sendHydrated(m.chat, text.trim(), wm, await genProfile(conn, m), 'https://github.com/FahriAdison', 'Github', null, null, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
       conn.sendFile(m.chat, vn, 'dj1.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true 
