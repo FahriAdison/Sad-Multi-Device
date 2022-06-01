@@ -11,3 +11,7 @@ via github:
 https://github.com/FahriAdison/node_modules
 
 NOTE: UBAH APIKEY DI CONFIG.JS
+
+SUPPORT RUN?
+TERMUX,HEROKU,RDP,PANEL,REPLIT,RAILWAY
+OKTETO?(Belum Tau :v)
