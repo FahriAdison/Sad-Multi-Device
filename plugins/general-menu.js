@@ -1,20 +1,24 @@
+//Make & Help By
+//Johannes & Papah-Chan
 import jimp from 'jimp'
+import fs from 'fs'
 import PhoneNumber from 'awesome-phonenumber'
+import moment from 'moment-timezone'
 
 let tags = {}
 const defaultMenu = {
-  before: 'Hi, %name 👋\n\n> Date: %date\n> Time: %time WIB\n> Runtime: %uptime\n%readmore',
-  header: '❏═┅═━–〈 *%category*',
-  body: '┊々 %cmd %islimit %isPremium',
-  footer: '┗––––––––––✦',
-  after: '⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕',
+  before: `\n> Date: %date\n> Time: %time \n> Runtime: %uptime\n%readmore`,
+  header: '*%category*',
+  body: '• %cmd %islimit %isPremium',
+  footer: '',
+  after: '',
 }
 
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let name = m.pushName || conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
-    let locale = 'id'
+    let locale = 'en'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
@@ -82,16 +86,32 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       name, date, time,
       readmore: readMore
     }
+    let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     // const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './src/avatar_contact.png')
     // if (m.isGroup) return conn.sendButton(m.chat, text.trim(), conn.getName(conn.user.jid), pp, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
-    conn.sendHydrated(m.chat, text.trim(), wm, await genProfile(conn, m), 'https://github.com/FahriAdison', 'Github', null, null, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
-      conn.sendFile(m.chat, vn, 'dj1.mp3', null, m, true, {
+    //conn.sendHydrated(m.chat, text.trim(), conn.getName(conn.user.jid), await genProfile(conn, m), 'https://youtube.com/channel/UC0hs_I8N3JntK5vO6KogavQ', 'YouTube', null, null, [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
+   // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: await conn.getName(conn.user.jid) , templateButtons: [{ quickReplyButton: { displayText: 'Speedtest', id: `${_p}ping` }}, { quickReplyButton: { displayText: 'Owner', id: `${_p}owner` }} ] })
+   conn.sendButton(m.chat, `*${wish()}, ${name} 👋*`, text.trim(), await genProfile(conn, m), [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
+mediaType: 'VIDEO',
+mediaUrl: 'https://www.kibrispdr.org/dwn/7/yotsuba-nakano-wallpaper.jpg',
+title: 'Simple Bot Esm',
+body: 'By Papah-Chan',
+thumbnail: fs.readFileSync("./thumbnail.jpg"),
+sourceUrl: 'https://youtu.be/poD-7_U3jXk'
+  }
+ } 
+})
+conn.sendFile(m.chat, vn, 'dj1.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true 
 })
-   // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: await conn.getName(conn.user.jid) , templateButtons: [{ quickReplyButton: { displayText: 'Speedtest', id: `${_p}ping` }}, { quickReplyButton: { displayText: 'Owner', id: `${_p}owner` }} ] })
-     //conn.sendButton(m.chat, text.trim(), conn.user.name, await genProfile(conn, m), [['Speedtest', _p + 'ping'], ['Owner', _p + 'owner']], m)
+    // conn.sendButton(m.chat, 
+    //`*Hi, ${name} 👋*\n\n`, 
+  //  text.trim(), './media/marin.jpg', [
+// [`Speedtest`, `${_p}ping`],
+// [`Owner`, `${_p}owner`]
+//], m, {asLocation: true})
   } catch (e) {
     m.reply('An error occurred')
     throw e
@@ -102,7 +122,6 @@ handler.tags = ['general']
 handler.alias = ['menu', 'help']
 handler.command = /^(menu|help|\?)$/i
 handler.exp = 3
-handler.register = true
 
 export default handler
 
@@ -114,6 +133,28 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
+
+function wish() {
+    let wishloc = ''
+  const time = moment.tz('Asia/Kolkata').format('HH')
+  wishloc = ('Hi')
+  if (time >= 0) {
+    wishloc = ('Night Rider')
+  }
+  if (time >= 4) {
+    wishloc = ('Good Morning')
+  }
+  if (time >= 12) {
+    wishloc = ('Good Afternoon')
+  }
+  if (time >= 16) {
+    wishloc = ('️Good Evening')
+  }
+  if (time >= 23) {
+    wishloc = ('Night Rider')
+  }
+  return wishloc
 }
 
 async function genProfile(conn, m) {
