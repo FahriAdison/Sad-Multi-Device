@@ -5,7 +5,8 @@ let brainly = new Brainly('id')
 
 let handler = async (m, { conn, text }) => {
 	if (!text) throw 'Input Query'
-	let res = await brainly.search('id', text).catch(() => null)
+	let res = await brainly.search(text, 'id').catch(() => null)
+	console.log(res)
 	if (res) {
 		let answer = res.map(({ question, answers }, i) => `
 *Pertanyaan*${question.grade ? ` (${question.grade})` : ''}\n${question.content}${answers.map((v, i) => `
