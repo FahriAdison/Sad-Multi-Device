@@ -13,7 +13,7 @@ let handler = async (m, { conn, args }) => {
 	})
 }
 handler.command = /^(gdrive)$/i
-handler.disabled = true
+handler.disabled = false
 
 export default handler
 
