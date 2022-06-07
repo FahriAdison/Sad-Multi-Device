@@ -8,8 +8,8 @@ import moment from 'moment-timezone'
 let tags = {}
 const defaultMenu = {
   before: `\n> Date: %date\n> Time: %time \n> Runtime: %uptime\n%readmore`,
-  header: '*%category*',
-  body: '• %cmd %islimit %isPremium',
+  header: '*❏═┅═━–〈 %category*',
+  body: '┊› %cmd %islimit %isPremium',
   footer: '',
   after: '',
 }
@@ -68,8 +68,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '(Limit)' : '')
-                .replace(/%isPremium/g, menu.premium ? '(Premium)' : '')
+                .replace(/%islimit/g, menu.limit ? 'Ⓛ' : '')
+                .replace(/%isPremium/g, menu.premium ? 'Ⓟ' : '')
                 .trim()
             }).join('\n')
           }),
@@ -99,8 +99,8 @@ title: 'Simple Bot Esm',
 body: 'By Papah-Chan',
 thumbnail: fs.readFileSync("./thumbnail.jpg"),
 sourceUrl: 'https://youtu.be/poD-7_U3jXk'
+}
   }
- } 
 })
 conn.sendFile(m.chat, vn, 'dj1.mp3', null, m, true, {
 type: 'audioMessage', 
@@ -117,10 +117,10 @@ ptt: true
     throw e
   }
 }
-handler.help = ['menu']
+handler.help = ['m']
 handler.tags = ['general']
-handler.alias = ['menu', 'help']
-handler.command = /^(menu|help|\?)$/i
+handler.alias = ['m']
+handler.command = /^(m)$/i
 handler.exp = 3
 
 export default handler
