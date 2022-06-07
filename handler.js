@@ -45,22 +45,6 @@ export async function handler(chatUpdate) {
                     if (!isNumber(user.regTime))
                         user.regTime = -1
                 }
-                if (!isNumber(user.exp))
-                    user.exp = 0
-                if (!isNumber(user.limit))
-                    user.limit = 10
-                if (!isNumber(user.lastclaim))
-                    user.lastclaim = 0
-                if (!('registered' in user))
-                    user.registered = false
-                if (!user.registered) {
-                    if (!('name' in user))
-                        user.name = m.name
-                    if (!isNumber(user.age))
-                        user.age = -1
-                    if (!isNumber(user.regTime))
-                        user.regTime = -1
-                }
                 if (!isNumber(user.afk))
                     user.afk = -1
                 if (!('afkReason' in user))
@@ -74,16 +58,16 @@ export async function handler(chatUpdate) {
                 if (!('role' in user))
                     user.role = 'Beginner'
                 if (!('autolevelup' in user))
-                    user.autolevelup = true
+                    user.autolevelup = false
 
                 if (!isNumber(user.money))
                     user.money = 0
-                if (!isNumber(user.atm))
-                    user.atm = 0
-                if (!isNumber(user.fullatm))
-                    user.fullatm = 0
+                if (!isNumber(user.wallet))
+                    user.wallet = 0
                 if (!isNumber(user.bank))
                     user.bank = 0
+                if (!isNumber(user.net))
+                    user.net = 0
                 if (!isNumber(user.health))
                     user.health = 100
                 if (!isNumber(user.limit))
@@ -109,8 +93,6 @@ export async function handler(chatUpdate) {
                     user.gold = 0
                 if (!isNumber(user.iron))
                     user.iron = 0
-                if (!isNumber(user.upgrader))
-                    user.upgrader = 0
 
                 if (!isNumber(user.common))
                     user.common = 0
@@ -120,8 +102,6 @@ export async function handler(chatUpdate) {
                     user.mythic = 0
                 if (!isNumber(user.legendary))
                     user.legendary = 0
-                if (!isNumber(user.superior))
-                    user.superior = 0
                 if (!isNumber(user.pet))
                     user.pet = 0
 
@@ -141,10 +121,6 @@ export async function handler(chatUpdate) {
                     user.dog = 0
                 if (!isNumber(user.dogexp))
                     user.dogexp = 0
-                if (!isNumber(user.robo))
-                    user.robo = 0
-                if (!isNumber(user.roboxp))
-                    user.roboxp = 0
 
                 if (!isNumber(user.horselastfeed))
                     user.horselastfeed = 0
@@ -190,15 +166,62 @@ export async function handler(chatUpdate) {
                     user.lastweekly = 0
                 if (!isNumber(user.lastmonthly))
                     user.lastmonthly = 0
-                if (!isNumber(user.lastbunga))
-                    user.lastbunga = 0
+                if (!isNumber(user.lastrob))
+                    user.lastrob = 0
+                if (!isNumber(user.lastwork))
+                    user.lastwork = 0
+                if (!isNumber(user.gamemines))
+                    user.gamemines = false
+                if (!isNumber(user.pc))
+                    user.pc = 0
+                 if (!('job' in user))
+                    user.job = ''
+                if (!('pasangan' in user))
+                    user.pasangan = ''
+                //NEW RPG
+                if (!('skill' in user))
+                    user.skill = ''
+                if (!('misi' in user))
+                    user.misi = ''
+                if (!('title' in user))
+                    user.title = ''
+                if (!isNumber(user.skillexp))
+                    user.skillexp = 0
+                if (!isNumber(user.pointxp))
+                    user.pointxp = 0
+                if (!isNumber(user.lastmisi))
+                    user.lastmisi = 0
+                if (!isNumber(user.lastfight))
+                    user.lastfight = 0
+                if (!isNumber(user.crystal))
+                    user.crystal = 0
+                if (!isNumber(user.gems))
+                    user.gems = 0
+                if (!isNumber(user.magicwand))
+                    user.magicwand = 0
+                if (!isNumber(user.magicwanddurability))
+                    user.magicwanddurability = 0
+               if (!isNumber(user.arc))
+                    user.arc = 0
+               if (!isNumber(user.arcdurability))
+                    user.arcdurability = 0
+               if (!isNumber(user.bow))
+                    user.bow = 0
+              if (!isNumber(user.katana))
+                    user.katana = 0
+              if (!isNumber(user.katanadurability))
+                    user.katanadurability = 0
                     
-                if (!isNumber(user.premium))
-                    user.premium = false
-                if (!isNumber(user.premiumTime))
-                    user.premiumTime = 0
-                if (!isNumber(user.limitjoin))
-                    user.limitjoin = 0
+              if (!isNumber(user.strength))
+                    user.strength = 0
+              if (!isNumber(user.mana))
+                    user.mana = 0
+              if (!isNumber(user.stamina))
+                    user.stamina = 0
+              if (!isNumber(user.agility))
+                    user.agility = 0
+              if (!isNumber(user.intelligence))
+                    user.intelligence = 0
             } else
                 global.db.data.users[m.sender] = {
                     exp: 0,
@@ -214,12 +237,12 @@ export async function handler(chatUpdate) {
                     warn: 0,
                     level: 0,
                     role: 'Beginner',
-                    autolevelup: true,
+                    autolevelup: false,
 
                     money: 0,
+                    net: 0,
+                    wallet: 0,
                     bank: 0,
-                    atm: 0,
-                    fullatm: 0,
                     health: 100,
                     limit: 100,
                     potion: 10,
@@ -232,13 +255,11 @@ export async function handler(chatUpdate) {
                     diamond: 0,
                     gold: 0,
                     iron: 0,
-                    upgrader: 0,
 
                     common: 0,
                     uncommon: 0,
                     mythic: 0,
                     legendary: 0,
-                    superior: 0,
                     pet: 0,
 
                     horse: 0,
@@ -273,11 +294,41 @@ export async function handler(chatUpdate) {
                     lasthunt: 0,
                     lastweekly: 0,
                     lastmonthly: 0,
-                    lastbunga: 0,
+                    lastrob: 0,
+                    lastwork: 0,
+
+                    gamemines: false,
+                    pc: false,
+                    job: '',
+                    pasangan: '',
                     
-                    premium: false,
-                    premiumTime: 0,
-                    limitjoin: 0,
+                    //RPG NEW
+                    skill: "",
+                    skillexp: 0,
+                    pointxp: 0,
+                    title: "",
+                    misi: "",
+                    
+                    lastfight: 0,
+                    lastmisi: 0,
+                    
+                    crystal: 0,
+                    gems: 0,
+                    
+                    magicwand: 0,
+                    magicwanddurability: 0,
+                    arc: 0,
+                    arcdurability: 0,
+                    bow: 0,
+                    katana: 0,
+                    katanadurability: 0,
+                    
+                    strength: 30,
+                    mana: 20,
+                    stamina: 100,
+                    agility: 16,
+                    intelligence: 10,
+                    
                 }
             let chat = global.db.data.chats[m.chat]
             if (typeof chat !== 'object')
