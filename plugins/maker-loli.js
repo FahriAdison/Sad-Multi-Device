@@ -1,4 +1,4 @@
-let fetch = require('node-fetch')
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
    response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
@@ -13,4 +13,4 @@ handler.register = true
 
 handler.limit = true
 
-module.exports = handler
+export default handler
