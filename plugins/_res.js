@@ -1,15 +1,11 @@
 export async function all(m) {
 
-  const stc = ['http://short.up.railway.app/qYCKWq',
-              'http://short.up.railway.app/jOgajy',
-              'http://short.up.railway.app/kEBa2O',
-              'http://short.up.railway.app/ZI4QQk',
-
-'https://tinyurl.com/2ypo6oex',
-
-'https://tinyurl.com/2cj43zfn',
-              'http://short.up.railway.app/uWMEQs',
-              'http://short.up.railway.app/aSyMjP']
+  const stc = ['https://a.uguu.se/AinzEawY.webp',
+              'https://a.uguu.se/aNqaxmfZ.webp',
+              'https://a.uguu.se/yJELqBgJ.webp',
+              'https://a.uguu.se/vfVKiAGe.webp',
+              'https://a.uguu.se/uybRbuue.webp',
+              'https://a.uguu.se/CDGifugk.webp']
   var stcs = stc[Math.floor(Math.random() * (stc.length))]
 if (m.isBaileys) return
     if (m.chat.endsWith('broadcast')) return
