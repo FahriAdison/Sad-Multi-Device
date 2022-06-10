@@ -22,6 +22,7 @@ import { tmpdir } from 'os'
 import { format } from 'util'
 import { makeWASocket, protoType, serialize } from './lib/simple.js'
 import { Low, JSONFile } from 'lowdb'
+import Pino from 'pino'
 /* import {
   mongoDB,
   mongoDBV2
@@ -82,7 +83,9 @@ const { state, saveState } = useSingleFileAuthState(global.authFile)
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
-  // logger: P({ level: 'trace' })
+  logger: pino({ level: 'silent'}),
+  version: [2, 2204, 13]
+  // logger: pino({ level: 'trace' })
 }
 
 global.conn = makeWASocket(connectionOptions)
