@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
+let response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('Proses...')
   let res = `https://ziy.herokuapp.com/api/maker/lolimaker?nama=${response[0]}&apikey=xZiyy`
