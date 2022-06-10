@@ -1,6 +1,6 @@
-let fetch = require('node-fetch')
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
+let response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('proses..')
   let res = `https://ziy.herokuapp.com/api/maker/rem?nama=${response[0]}&apikey=xZiyy`
@@ -13,4 +13,4 @@ handler.register = true
 
 handler.limit = true
 
-exports default handler
+export default handler
