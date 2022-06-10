@@ -66,6 +66,7 @@
         "google-play-scraper": "^8.1.0",
         "hmtai": "^2.0.10",
         "human-readable": "^0.2.1",
+        "https": "^1.0.0",
         "insta-fetcher": "^1.3.20",
         "jimp": "^0.16.1",
         "jsdom": "^19.0.0",
