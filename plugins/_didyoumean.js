@@ -12,4 +12,4 @@ export function before(m, { match }) {
 		if (mean) this.sendButton(m.chat, `Did you mean: ${usedPrefix + mean}?\n`, null, null, [['Yes', `${usedPrefix + mean} ${text}`.trim()], ['No', usedPrefix + '?' ]], m)
 	}
 }
-export const disabled = false
+export const disabled = true
