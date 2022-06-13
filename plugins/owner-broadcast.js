@@ -1,9 +1,11 @@
 let handler = async (m, { conn, text }) => {
+	let wm = global.wm
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
 		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
 		teks = text ? text : cc.text
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
-	for (let id of groups) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore() + '• Broadcast Message'), true).catch(_ => _)
+	for (let id of groups) 
+	await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
 	m.reply('Selesai Broadcast All Group')
 }
 handler.help = ['broadcastgroup']
