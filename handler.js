@@ -147,6 +147,35 @@ export async function handler(chatUpdate) {
                     user.fishingrod = 0
                 if (!isNumber(user.fishingroddurability))
                     user.fishingroddurability = 0
+                
+                if (!isNumber(user.paus)) user.paus = 0
+     if (!isNumber(user.kepiting)) user.kepiting = 0
+     if (!isNumber(user.gurita)) user.gurita = 0
+     if (!isNumber(user.cumi)) user.cumi= 0
+     if (!isNumber(user.buntal)) user.buntal = 0
+     if (!isNumber(user.dory)) user.dory = 0
+     if (!isNumber(user.lumba)) user.lumba = 0
+     if (!isNumber(user.lobster)) user.lobster = 0
+     if (!isNumber(user.hiu)) user.hiu = 0
+     if (!isNumber(user.udang)) user.udang = 0
+     if (!isNumber(user.ikan)) user.ikan = 0
+     if (!isNumber(user.nila)) user.nila = 0
+     if (!isNumber(user.bawal)) user.bawal = 0
+     if (!isNumber(user.lele)) user.lele = 0
+     if (!isNumber(user.orca)) user.orca = 0
+        
+     if (!isNumber(user.banteng)) user.banteng = 0
+     if (!isNumber(user.harimau)) user.harimau = 0
+     if (!isNumber(user.gajah)) user.gajah = 0
+     if (!isNumber(user.kambing)) user.kambing = 0
+     if (!isNumber(user.panda)) user.panda = 0
+     if (!isNumber(user.buaya)) user.buaya = 0
+     if (!isNumber(user.kerbau)) user.kerbau = 0
+     if (!isNumber(user.sapi)) user.sapi = 0
+     if (!isNumber(user.monyet)) user.monyet = 0
+     if (!isNumber(user.babihutan)) user.babihutan = 0
+     if (!isNumber(user.babi)) user.babi = 0
+     if (!isNumber(user.ayam)) user.ayam = 0
 
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
@@ -284,6 +313,43 @@ export async function handler(chatUpdate) {
                     pickaxedurability: 0,
                     fishingrod: 0,
                     fishingroddurability: 0,
+                    
+                    as: 0,
+    paus: 0,
+    kepiting: 0,
+    gurita: 0,
+    cumi: 0,
+    buntal: 0,
+    dory: 0,
+    lumba: 0,
+    lobster: 0,
+    hiu: 0,
+    lele: 0,
+    nila: 0,
+    bawal: 0,
+    udang: 0,
+    ikan: 0,
+    orca: 0,
+    banteng: 0,
+    harimau: 0,
+    gajah: 0,
+    kambing: 0,
+    panda: 0,
+    buaya: 0,
+    kerbau : 0,
+    sapi: 0,
+    monyet : 0,
+    babihutan: 0,
+    babi: 0,
+    ayam: 0,
+    apel: 20,
+    ayamb: 0,
+    ayamg: 0,
+    ssapi: 0,
+    sapir: 0,
+    leleb: 0,
+    leleg: 0,
+    esteh: 0,
 
                     lastclaim: 0,
                     lastadventure: 0,
