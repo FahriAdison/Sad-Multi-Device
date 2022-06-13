@@ -12,7 +12,7 @@ Allah mengetahui apa-apa yang di hadapan mereka dan di belakang mereka, dan mere
   m.reply(caption)
 }
 handler.help = ['ayatkursi']
-handler.tags = ['alquran']
+handler.tags = ['quran']
 handler.command = /^(ayatkursi)$/i
 
 
