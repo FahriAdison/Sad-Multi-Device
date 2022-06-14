@@ -8,7 +8,7 @@ via MediaFire:
 https://www.mediafire.com/file/hqbc0vyvpuu4vn2/archive-2022-05-28T091926Z.tar.gz/file
 
 via github:
-https://github.com/FahriAdison/node_modules
+(ntar update kalau kelar)
 
 NOTE: UBAH APIKEY DI CONFIG.JS
 
