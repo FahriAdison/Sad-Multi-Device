@@ -85,7 +85,7 @@ error pas install module?
 coba module dibawah ini
 
 via MediaFire:
-https://www.mediafire.com/file/hqbc0vyvpuu4vn2/archive-2022-05-28T091926Z.tar.gz/file
+(ntar update kalau kelar)
 
 via github:
 (ntar update kalau kelar)
