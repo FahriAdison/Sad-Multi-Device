@@ -54,7 +54,16 @@ https://github.com/FahriAdison
 *❉ Johannes:*
 *❉ Krisna:*
 `
-m.reply(tqto)
+conn.reply(m.chat, tqto, m, { contextInfo: { externalAdReply: {
+            title: `© Sad-Bot`,
+            body: 'Simple Bot Esm',
+            description: 'Made By Papah-Chan',
+            mediaType: 2,
+          thumbnail: await(await fetch(hoppai.getRandom())).buffer(),
+         mediaUrl: sgc
+        }
+     }
+    })
 }
 handler.help = ['tqto']
 handler.tags = ['main','info']
