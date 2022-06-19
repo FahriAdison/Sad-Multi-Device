@@ -11,7 +11,7 @@ orbs:
 workflows:
     example-workflow:
       jobs:
-        - node/run
+        - node/run:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
           # https://circleci.com/developer/images/image/cimg/node
