@@ -414,6 +414,9 @@ esteh: 0,
 	                if (!('antiDelete' in chat)) chat.antiDelete = false
 	                if (!('antiLink' in chat)) chat.antiLink = false
 	                if (!('viewOnce' in chat)) chat.viewOnce = false
+			if (!('nsfw' in chat)) chat.nsfw = false
+                        if (!('premnsfw' in chat)) chat.premnsfw = false
+                        if (!('simi' in chat)) chat.simi = false
 	                if (!isNumber(chat.expired)) chat.expired = 0
 	            } else global.db.data.chats[m.chat] = {
 	                isBanned: false,
@@ -426,6 +429,9 @@ esteh: 0,
 	                antiDelete: false,
 	                antiLink: false,
 	                viewOnce: false,
+			simi: false,
+                        nsfw: false,
+                        premnsfw: false,
 	                expired: 0
 	            }
             }
