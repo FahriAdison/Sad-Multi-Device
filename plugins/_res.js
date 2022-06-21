@@ -16,7 +16,7 @@ if (m.isBaileys) return
     // ketika ditag 
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
-            await this.sendMessage(m.chat, { sticker : stc, thumbnail: thumb , contextInfo:{  externalAdReply: { showAdAttribution: true,
+            await this.sendMessage(m.chat, { sticker : stc, thumbnail: await( await fetch(pp)).buffer() , contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: 'https://wa.me/6283820073017',
 title: '「 ❔ 」',
