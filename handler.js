@@ -416,6 +416,8 @@ esteh: 0,
 	                if (!('viewOnce' in chat)) chat.viewOnce = false
 			if (!('nsfw' in chat)) chat.nsfw = false
                         if (!('premnsfw' in chat)) chat.premnsfw = false
+			if (!('premium' in chat)) chat.premium = false
+                        if (!('premiumTime' in chat)) chat.premiumTime = false
                         if (!('simi' in chat)) chat.simi = false
 	                if (!isNumber(chat.expired)) chat.expired = 0
 	            } else global.db.data.chats[m.chat] = {
@@ -432,6 +434,8 @@ esteh: 0,
 			simi: false,
                         nsfw: false,
                         premnsfw: false,
+			premium: false,
+			premiumTime: false,
 	                expired: 0
 	            }
             }
