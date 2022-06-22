@@ -86,6 +86,7 @@ const connectionOptions = {
   logger: pino({ level: 'silent'}),
   version: [2, 2204, 13]
   // logger: pino({ level: 'trace' })
+  conn.browserDescription = ['Sad MD Bot', 'Safari', '3.0']
 }
 
 global.conn = makeWASocket(connectionOptions)
