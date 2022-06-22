@@ -53,18 +53,10 @@ https://github.com/FahriAdison
 *❉ Kannachan:*
 *❉ Johannes:*
 *❉ Krisna:*
+*❉ Rlxfly:*
 `
-conn.reply(m.chat, tqto, m, { contextInfo: { externalAdReply: {
-            title: `© Sad-Bot`,
-            body: 'Simple Bot Esm',
-            description: 'Made By Papah-Chan',
-            mediaType: 2,
-          thumbnail: await(await fetch(hoppai.getRandom())).buffer(),
-         mediaUrl: sgc
+conn.sendButtonDoc(m.chat, tqto, wm,'Thanks','bilek', fliveLoc2, m)
         }
-     }
-    })
-}
 handler.help = ['tqto']
 handler.tags = ['main','info']
 handler.command = /^(credits|credit|thanks|thanksto|tqto)$/i
