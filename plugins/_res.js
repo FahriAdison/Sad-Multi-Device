@@ -18,10 +18,10 @@ if (m.isBaileys) return
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.sendMessage(m.chat, { sticker : stc, thumbnail: await( await fetch(pp)).buffer() , contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
-mediaUrl: 'https://wa.me/6283820073017',
+mediaUrl: 'https://wa.me/17608914335',
 title: '「 ❔ 」',
-body: me,
-sourceUrl: 'http://github.com/Rlxfly', thumbnail: await( await fetch(pp)).buffer()
+body: wm,
+sourceUrl: 'http://github.com/FahriAdison', thumbnail: await( await fetch(pp)).buffer()
  //Kalo mau ada pp dari sender/pengirimnya
  //Kalo mau ringan pake global.thumb                                                                                                              
                                                                                                                
