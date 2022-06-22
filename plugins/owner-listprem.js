@@ -12,12 +12,12 @@ let handler = async (m, { conn, args }) => {
   await conn.sendButton(m.chat, `${htki} *PREMIUM* ${htka}
 ┌✦ *My Premium Time:*
 ┊• *Name:* ${conn.getName(m.sender)}
-${prem ? `${clockString (premiumTime - new Date() * 1)}` : '┊• *PremiumTime:* Expired 🚫'}
+${prem ? `${clockString (premTime - new Date() * 1)}` : '┊• *PremiumTime:* Expired 🚫'}
 ┗━═┅═━––––––๑
 
 •·–––––––––––––––––––––·•
 ${sortedP.slice(0, len).map(({ jid, name, premiumTime, registered }, i) => `\n\n┌✦ ${registered ? name : conn.getName(jid)}\n┊• wa.me/${jid.split`@`[0]}\n${premiumTime > 0 ? `${clockString (premiumTime - new Date() * 1)}` : '┊ *EXPIRED 🚫*'}`).join`\n┗━═┅═━––––––๑`}
-┗━═┅═━––––––๑`.trim(), wm, null, [[`${prem ? '✦ Owner ✦': '✦ Buy Premium ✦'}`, `${prem ? '.owner nomor': '.premium'}`]], fkon)
+┗━═┅═━––––––๑`.trim(), wm, null, [[`${prem ? '✦ Owner ✦': '✦ Buy Premium ✦'}`, `${prem ? '.owner': '.premium'}`]], fkon)
 setTimeout(() => {
     if (db.data.chats[m.chat].deletemedia) conn.deleteMessage(m.chat, key)
   }, db.data.chats[m.chat].deletemediaTime)
