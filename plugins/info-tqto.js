@@ -1,8 +1,9 @@
-const { makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = (await import('@adiwajshing/baileys')).default
-import fs from 'fs'
 import fetch from 'node-fetch'
-import moment from 'moment-timezone'
+
 let handler = async (m) => {
+    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+    let wibu = `https://api.zacros.my.id/randomimg/loli`    
+    let thumb = await(await fetch(wibu)).buffer()
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
@@ -46,16 +47,25 @@ https://github.com/LitRHap
 https://github.com/Rlxfly
 *❉ Aine:*
 https://github.com/Aiinne
-*▸ - - - —「 KANG RECODE 」— - - - ◂
+*▸ - - - —「 KANG RECODE 」— - - - ◂*
 *❉ Fahri:*
 https://github.com/FahriAdison
-*▸ - - - —「 SPESIAL HELPER 」— - - - ◂
+*▸ - - - —「 SPESIAL HELPER 」— - - - ◂*
 *❉ Kannachan:*
 *❉ Johannes:*
 *❉ Krisna:*
 *❉ Rlxfly:*
 `
-conn.sendButtonDoc(m.chat, tqto, wm,'Thanks','bilek', fliveLoc2, m)
+conn.sendButtonDoc(m.chat, tqto, wm,'Thanks','Bilek', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: "https://Instagram.com/bot_whangsaf",
+    mediaType: "VIDEO",
+    description: "https://Instagram.com/bot_whangsaf", 
+    title: 'Simple Bot Esm',
+    body: wm,
+    thumbnail: thumb,
+    sourceUrl: sgc
+}
+} })
         }
 handler.help = ['tqto']
 handler.tags = ['main','info']
