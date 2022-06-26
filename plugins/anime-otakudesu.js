@@ -1,13 +1,13 @@
 import { otakudesu } from 'hxz-api'
 import fetch from 'node-fetch'
-//let jimp = require('jimp')
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     //let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''
     if (!text) throw `Use example ${usedPrefix}${command} Anime`
-    const result = await otakudesu(text)
-    
-let otaku = `
+    let result = await otakudesu(text)
+    let datathumb = await(await fetch(result.img)).buffer()
+    let otaku = `
 *JUDUL:* ${result.judul}
+*JEPANG:* ${result.jepang}
 *RATE:* ${result.rate}
 *PRODUSER:* ${result.produser}
 *TIPE:* ${result.tipe}
@@ -22,9 +22,9 @@ let otaku = `
 
 *BATCHSD:* ${result.batchSD}
 
-*BATCHHD:* ${result.batchHD}`
-let gambar = await(await fetch(result.img)).buffer()
-await conn.sendFile(m.chat, gambar, '', otaku, m)
+*BATCHHD:* ${result.batchHD}
+`
+await conn.sendButtonImg(m.chat, datathumb, otaku, wm, 'menu', '.menu', m)
 }
 
 handler.help = ['otakudesu'].map(v => v + ' <Apa>')
