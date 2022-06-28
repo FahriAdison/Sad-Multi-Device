@@ -4,10 +4,12 @@ import { watchFile, unwatchFile } from 'fs'
 import moment from 'moment-timezone'
 
 global.owner = [
+  ['+62 831-4339-37633'],
   ['+1 760-891-4335'],
   ['+84 82 430 4616'],
   ['+84 34 979 0091'],
   ['+62 818-0545-0249'],
+  ['+62 831-4339-37633', 'Letta', true],
   ['17608914335', 'Papah-Chan', true],
   ['+84 82 430 4616', 'Bot', true],
   ['+84 34 979 0091', 'Johannes', true],
@@ -20,6 +22,7 @@ global.lolkey = 'YourApikey'
 global.xkey = 'YourApikey'
 global.APIs = { // API Prefix
   // name: 'https://website'
+  lolhuman: 'https://api.lolhuman.xyz',
   nrtm: 'https://nurutomo.herokuapp.com',
   bg: 'http://bochil.ddns.net',
   xteam: 'https://api.xteam.xyz',
@@ -132,6 +135,11 @@ global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()
     let emot = {
+      bibitanggur: '🍇',
+      bibitpisang: '🍌',
+      bibitjeruk: '🍊',
+      bibitapel: '🍎',
+      bibitmangga: '🥭',
       level: '📊',
       limit: '🎫',
       health: '❤️',
