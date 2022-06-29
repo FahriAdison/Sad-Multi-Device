@@ -1,4 +1,4 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+
 const Skepiting = 7000
 const Slobster = 7000
 const Sudang = 7000
