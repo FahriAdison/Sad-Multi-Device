@@ -1,4 +1,4 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+
 // let pajak = 0.02
 let handler = async (m, { conn, text }) => {
 let dapat = (Math.floor(Math.random() * 5000))
