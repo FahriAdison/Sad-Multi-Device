@@ -1,5 +1,3 @@
-import util from 'util'
-import path from 'path'
 let user = a => '@' + a.split('@')[0]
 function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 if (!text) throw `Contoh:
