@@ -3,9 +3,11 @@ import fetch from 'node-fetch'
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
+  let wibu = `https://api.zacros.my.id/randomimg/loli`    
+let thumb = await(await fetch(wibu)).buffer()
   if (args && /(?:https?:\/{2})?(?:w{3}|m|music)?\.?youtu(?:be)?\.(?:com|be)(?:watch\?v=|\/)([^\s&]+)/i.test(args[0])) {
     let opt = args[1] && args[1].isNumber() ? args[1].replace(/\D/g, '') : ''
-    let res = await fetch(`https://yt-downloader.akkun3704.repl.co/yt?url=${args[0]}`)
+    let res = await fetch(`https://yt-downloader.aliefputra.repl.co/yt?url=${args[0]}`)
     res = await res.json()
     if (!res) res = ''
     let { description, ownerChannelName, viewCount, uploadDate, likes, dislikes } = res.result.videoDetails
@@ -34,7 +36,15 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
     let _thumb = {}
     try { _thumb = { jpegThumbnail: await (await fetch(thumbnail)).buffer() } }
     catch (e) { }
-    await conn.sendMessage(m.chat, { [/^(?:-|--)doc$/i.test(args[1]) || isLimit ? 'document' : 'video']: { url: link }, fileName: `${title}.mp4`, mimetype: 'video/mp4', ..._thumb }, { quoted: m }).then(async (msg) => {
+    await conn.sendMessage(m.chat, { [/^(?:-|--)doc$/i.test(args[1]) || isLimit ? 'document' : 'video']: { url: link }, fileName: `${title}.mp4`, mimetype: 'video/mp4', ..._thumb }, { quoted: fkontak },{ contextInfo: { externalAdReply: { showAdAttribution: true,
+      mediaUrl: "https://Instagram.com/bot_whangsaf",
+      mediaType: "VIDEO",
+      description: "https://Instagram.com/bot_whangsaf", 
+      title: 'Simple Bot Esm',
+      body: wm,
+      thumbnail: thumb,
+      sourceUrl: sgc
+    }}}).then(async (msg) => {
       let caption = `*Title:* ${title}\n*Quality:* ${quality}\n*Channel:* ${ownerChannelName || ''}\n*Views:* ${viewCount}\n*Upload Date:* ${uploadDate}${likes ? `\n*Likes:* ${likes}` : ''}${dislikes ? `\n*Dislikes*: ${dislikes}` : ''}${description ? `\n*Description:*\n${description}` : ''}`.trim()
       await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption }, { quoted: msg })
     })
