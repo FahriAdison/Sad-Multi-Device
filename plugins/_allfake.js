@@ -33,7 +33,8 @@ handler.all = async function (m) {
 		
 		// pesan sementara
 		global.ephemeral = '86400' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
-		
+		let urls = pickRandom(['https://tinyurl.com/248tem3e', 'https://tinyurl.com/2ygkf7cn', 'https://tinyurl.com/29rt6ynv', 'https://tinyurl.com/25ampr4y', 'https://tinyurl.com/2yq9srmd', 'https://tinyurl.com/2bahkesq', 'https://tinyurl.com/2xnzw74a', 'https://tinyurl.com/2b9hocps', 'https://tinyurl.com/265ekuvk', 
+'https://tinyurl.com/2c82ajhq', 'https://tinyurl.com/265y8p3e', 'https://tinyurl.com/286yslxu'])
 		// externalAdReply atau text with thumbnail. gatau bahasa Inggris? coba translate!
 		global.adReply = {
 			contextInfo: {
@@ -42,11 +43,11 @@ handler.all = async function (m) {
 				externalAdReply: { // Bagian ini sesuka kalian berkreasi :'v
                     showAdAttribution: true,
 					title: global.ucapan,
-					body: "Hallo " + name,
+					body: wm,
 					mediaUrl: sgc,
 					description: 'simple bot esm',
 					previewType: "PHOTO",
-					thumbnail: await (await fetch(pp)).buffer(),
+					thumbnail: await (await fetch(urls)).buffer(),
 					sourceUrl: "https://github.com/FahriAdison",					
 				}
 			}
