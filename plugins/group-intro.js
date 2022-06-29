@@ -1,5 +1,4 @@
-import fs from 'fs'
-let handler = async (m, {text, usedPrefix, command, conn}) => {
+let handler = async (m, { conn }) => {
 
 
 let krtu = `0ཻུ۪۪ꦽꦼ̷⸙‹•══════════════♡᭄
