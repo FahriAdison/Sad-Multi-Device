@@ -1,18 +1,21 @@
+import MessageType from '@adiwajshing/baileys'
 import fetch from 'node-fetch'
-import { Sticker } from 'wa-sticker-formatter'
+import { sticker } from '../lib/sticker.js'
+import fs from 'fs'
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-	let [emoji1, emoji2] = text.split`+`
-	if (emoji1 && emoji2) {
-		let url = API('violetics', '/api/media/emojimix', { emoji1, emoji2 }, 'apikey')
-		let res = await fetch(url)
-		if (res.status !== 200) throw res.statusText
-		let stiker = await (new Sticker(url)).toMessage()
-		conn.sendMessage(m.chat, stiker, { quoted: m })
-	} else throw `Ex: ${usedPrefix+command} ${decodeURI('%F0%9F%92%80')}+${decodeURI('%F0%9F%92%80')}`
+let handler = async (m, { conn, text, args, usedPrefix, command }) => {
+  if (!args[0]) throw `*⛌ Masukan Emoji Yg ingin kamu gabungkan*\n\n*• Example:*\n- ${usedPrefix + command} 🐱+👻\n\n[ minimal 2 emoji ]`
+  let [emoji1, emoji2] = text.split`+`
+  const anu = await (await fetch(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)).json()
+  if (anu.results[0] == undefined) throw 'Kombinasi Emojimix Tidak Ditemukan'
+  let emix = anu.results[0].media_formats.png_transparent.url
+  let stiker = await sticker(false, emix, global.packname, global.author)
+  conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }
+
 handler.help = ['emojimix']
 handler.tags = ['misc']
-handler.command = /^(emojimix)$/i
+handler.command = /^(emojimix|emix)$/i
 
 export default handler
+
