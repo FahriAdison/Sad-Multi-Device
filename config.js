@@ -6,12 +6,12 @@ import moment from 'moment-timezone'
 global.owner = [
   ['+62 816-4682-9895'],
   ['+62 895-3170-4997'],
-  ['+62 856-24823115'],
+  ['+62 856-2482-3115'],
   ['+84 34 979 0091'],
   ['+62 818-0545-0249'],
   ['+62 816-4682-9895', 'Irfaan Official', true],
-  ['+62 895-3170-4997', 'Irfaan', true],
-  ['+62 856-2482-3115', 'Alfarabotz', true],
+  ['+62 895-3170-4997', 'Alfarabotz', true],
+  ['+62 856-2482-3115', 'Irfaan', true],
   ['+84 34 979 0091', 'Johannes', true],
   ['+62 818-0545-0249', 'Krisna', true],
   // [number, dia creator/owner?, dia developer?]
