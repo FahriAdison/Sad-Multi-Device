@@ -86,16 +86,16 @@ $ node .
 
 
 Ada Yg Error?Langsung Chat
-https://wa.me/17608914335
+https://wa.me/6282287219167
 
 error pas install module?
 coba module dibawah ini
 
 via MediaFire:
-(ntar update kalau kelar)
+(project pending)
 
 via github:
-(ntar update kalau kelar)
+project pending
 
 NOTE: UBAH APIKEY DI CONFIG.JS
 
