@@ -17,6 +17,12 @@ let tqto = `*▸ - - - —「 BIG THANKS TO 」— - - - ◂*
 https://github.com/adiwajshing
 *❉ Nurutomo:*
 https://github.com/Nurutomo
+*❉ Xiao/Elaina:*
+https://github.com/ImYanXiao
+*❉ Hyzer:*
+https://github.com/Hyzerr
+*❉ Aldi:*
+https://github.com/Hyuura-Official
 *❉ Istikmal:* 
 https://github.com/BochilGaming
 *❉ Ariffb:*
