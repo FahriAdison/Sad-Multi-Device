@@ -884,7 +884,7 @@ export async function deleteUpdate(message) {
         await this.reply(msg.chat, `
 Detected @${participant.split`@`[0]} deleted message
 To turn off this feature, type
-*.enable delete*
+*.disable delete*
 `.trim(), msg, { mentions: [participant] })
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
