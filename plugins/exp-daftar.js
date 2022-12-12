@@ -88,9 +88,8 @@ const listMessage = {
 'fileLength':fsizedoc,
 'pageCount':fpagedoc,
 'contextInfo':{
-'forwardingScore':555,
-'isForwarded':true,
 'externalAdReply':{
+'showAdAttribution': true, 
 'mediaUrl':global.sig,
 'mediaType':2,
 'previewType':'pdf',
