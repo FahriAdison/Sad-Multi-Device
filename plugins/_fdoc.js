@@ -9,10 +9,10 @@ const anu = {
            participant : '0@s.whatsapp.net'
                         },
        message: {
-                    documentMessage: {
-                    title: 'Sad.jpeg', 
-                    jpegThumbnail: './thumbnail.jpg'
-                          }
+        "documentMessage": {
+          "title": 'Sad.jpeg', 
+          "jpegThumbnail": './thumbnail.jpg'
+                                }
                         }
                       }
 conn.sendMessage(m.chat,{ text: wm}, { quoted: anu })
