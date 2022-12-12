@@ -120,10 +120,17 @@ async function connectionUpdate(update) {
     console.log(await global.reloadHandler(true).catch(console.error))
     global.timestamp.connect = new Date
   }
-  // console.log(JSON.stringify(update, null, 4))
   if (global.db.data == null) loadDatabase()
+   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6282287219167@s.whatsapp.net`, 
+`┏═══════════════════
+┃╴◈ Bᴏᴛ Tᴇʟᴀʜ Tᴇʀsᴀᴍʙᴜɴɢ
+┣═══════════════════
+┃╴▶ Nᴏᴍᴏʀ : ${global.nomorbot}
+┃╴▶ Nᴀᴍᴇ Bᴏᴛ : ${global.namebot}
+┖┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬
+`, wm, 'Oᴡɴᴇʀ', '.owner', null
+)
 }
-
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
