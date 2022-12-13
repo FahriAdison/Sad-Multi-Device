@@ -5,6 +5,11 @@ NEW MODULES:
 Coming Soon
 -------------
 
+<a href="https://visitor-badge.glitch.me/badge?page_id=FahriAdison/Sad-Multi-Device"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=FahriAdison/Sad-Multi-Device"></a>
+<a href="https://github.com/FahriAdison/Sad-Multi-Device/network/members"><img title="Forks" src="https://img.shields.io/github/forks/FahriAdison/Sad-Multi-Device?label=Forks&color=blue&style=flat-square"></a>
+<a href="https://github.com/FahriAdison/Sad-Multi-Device/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/FahriAdison/Sad-Multi-Device?label=Stars&color=yellow&style=flat-square"></a>
+<a href="https://github.com/FahriAdison/Sad-Multi-Device/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/FahriAdison/Sad-Multi-Device?label=Contributors&color=blue&style=flat-square"></a>
+
 ## UNTUK PENGGUNA HEROKU
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FahriAdison/Sad-Multi-Device)
