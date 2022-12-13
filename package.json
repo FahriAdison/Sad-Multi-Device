@@ -1,6 +1,6 @@
 {
     "name": "Sad-Bot",
-    "version": "1.0.5",
+    "version": "2.0.0",
     "description": "Simple WhatsApp Bot ESM",
     "main": "index.js",
     "type": "module",
