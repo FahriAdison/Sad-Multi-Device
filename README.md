@@ -1,3 +1,4 @@
+
 ------------
 Redevelopment
 ------------
@@ -91,16 +92,17 @@ $ node .
 
 
 Ada Yg Error?Langsung Chat
-https://wa.me/6282287219167
+https://wa.me/6282268003229
 
 error pas install module?
 coba module dibawah ini
 
 via MediaFire:
-(project pending)
+(Coming Soon)
 
 via github:
-project pending
+(Coming Soon)
+
 
 NOTE: UBAH APIKEY DI CONFIG.JS
 
