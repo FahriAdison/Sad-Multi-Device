@@ -5,6 +5,16 @@ NEW MODULES:
 Coming Soon
 -------------
 
+------
+
+## _「 ENGLISH 」_
+> You can also recode this bot, it's easy for newbie in code/whatsapp bot, `If you have problem chat me` in [this](http://wa.me/6282287219167) `NOTE!` if you chat to me impolitely, then I won't answer it, get used to greeting first :)
+
+## _「 INDONESIA 」_
+> Kamu juga bisa membuat ulang bot ini, ini sangat mudah untuk pemula dalam programing/bot whatsapp `Jika kamu punya masalah chat sy` ke [ini](http://wa.me/6282287219167) `CATATAN!` jika kamu chat ke saya dengan tidak sopan 'p, woi', maka saya tidak akan menjawabnya, biasakan sapa/salam terlebih dahulu :)
+
+------
+
 <a href="https://visitor-badge.glitch.me/badge?page_id=FahriAdison/Sad-Multi-Device"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=FahriAdison/Sad-Multi-Device"></a>
 <a href="https://github.com/FahriAdison/Sad-Multi-Device/network/members"><img title="Forks" src="https://img.shields.io/github/forks/FahriAdison/Sad-Multi-Device?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/FahriAdison/Sad-Multi-Device/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/FahriAdison/Sad-Multi-Device?label=Stars&color=yellow&style=flat-square"></a>
