@@ -1,17 +1,17 @@
 ------------
-Redevelopment
+SCRIPT INI SEDANG DALAM PERBAIKAN JADI BELUM SEMESTINYA BISA RUN FULL TANPA ERROR
 ------------
 NEW MODULES:
-Coming Soon
+Segera Hadir
 -------------
 
 ------
 
 ## _「 ENGLISH 」_
-> You can also recode this bot, it's easy for newbie in code/whatsapp bot, `If you have problem chat me` in [this](http://wa.me/17077727757) `NOTE!` if you chat to me impolitely, then I won't answer it, get used to greeting first :)
+> You can also recode this bot, it's easy for newbie in code/whatsapp bot, `If you have problem chat me` in [this](http://wa.me/17077727757) or [this](http://wa.me/6282287219167) `NOTE!` if you chat to me impolitely, then I won't answer it, get used to greeting first :)
 
 ## _「 INDONESIA 」_
-> Kamu juga bisa membuat ulang bot ini, ini sangat mudah untuk pemula dalam programing/bot whatsapp `Jika kamu punya masalah chat sy` ke [ini](http://wa.me/17077727757) `CATATAN!` jika kamu chat ke saya dengan tidak sopan 'p, woi', maka saya tidak akan menjawabnya, biasakan sapa/salam terlebih dahulu :)
+> Kamu juga bisa membuat ulang bot ini, ini sangat mudah untuk pemula dalam programing/bot whatsapp `Jika kamu punya masalah chat sy` ke [ini](http://wa.me/17077727757) atau [ini](http://wa.me/6282287219167) `CATATAN!` jika kamu chat ke saya dengan tidak sopan 'p, woi', maka saya tidak akan menjawabnya, biasakan sapa/salam terlebih dahulu :)
 
 ------
 
@@ -101,19 +101,21 @@ $ node .
 
 
 Ada Yg Error?Langsung Chat
-https://wa.me/6282268003229
+[Disini](https://wa.me/6282268003229)
+Atau
+[Disini](https://wa.me/17077727757)
 
 error pas install module?
 coba module dibawah ini
 
 via MediaFire:
-(Coming Soon)
+(Segera Hadir)
 
 via github:
-(Coming Soon)
+(Segera Hadir)
 
 
 NOTE: UBAH APIKEY DI CONFIG.JS
 
 SUPPORT RUN?
-TERMUX,HEROKU,RDP,PANEL,REPLIT,RAILWAY,OKTETO
+TERMUX,HEROKU,RDP,PANEL,REPLIT,RAILWAY,OKTETO (Mungkin)
