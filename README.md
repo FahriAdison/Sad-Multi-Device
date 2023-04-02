@@ -1,5 +1,6 @@
 ------------
-SC INI SEDANG DALAM PERBAIKAN JIKA INGIN MEMBANTU SILAHKAN CHAT SAYA DI SINI => [![MY WHATSAPP](https://img.shields.io/badge/WA-ME.svg)](https://wa.me/6282268003229)
+FIXED & UP TO DATE
+JIKA INGIN MEMBANTU SILAHKAN CHAT SAYA DI SINI => [![MY WHATSAPP](https://img.shields.io/badge/WA-ME.svg)](https://wa.me/6282268003229)
 ------------
 NEW MODULES:
 Segera Hadir
