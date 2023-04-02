@@ -9,9 +9,11 @@ Segera Hadir
 ------
 
 #### Special Thanks to
-[![Ali](https://github.com/Hyzerr.png?size=100)](https://github.com/Alusius)
+[![Ali](https://github.com/Aulusius.png?size=100)](https://github.com/Alusius)
 [![Farel](https://github.com/Rlxfly.png?size=100)](https://github.com/Rlxfly)
-[![Johannes](https://github.com/Akkun3704.png?size=100)](https://github.com/Johannes2803)
+[![Johannes](https://github.com/Johannes2803.png?size=100)](https://github.com/Johannes2803)
+
+` Yang Telah Membantu Saya Dalam Mengembangkan SC Ini`
 
 ## _「 ENGLISH 」_
 > You can also recode this bot, it's easy for newbie in code/whatsapp bot, `If you have problem chat me` in [this](http://wa.me/17077727757) or [this](http://wa.me/6282287219167) `NOTE!` if you chat to me impolitely, then I won't answer it, get used to greeting first :)
