@@ -1,5 +1,5 @@
 ------------
-SCRIPT INI SEDANG DALAM PERBAIKAN JADI BELUM SEMESTINYA BISA RUN FULL TANPA ERROR
+SC INI SEDANG DALAM PERBAIKAN JIKA INGIN MEMBANTU SILAHKAN CHAT SAYA DI SINI => [![MY WHATSAPP](https://img.shields.io/badge/WA-ME.svg)](https://wa.me/6282268003229)
 ------------
 NEW MODULES:
 Segera Hadir
@@ -35,7 +35,7 @@ Segera Hadir
 
 ## UNTUK PENGGUNA REPLIT
 
-[![Run on Repl.it](https://repl.it/badge/github/FadliDarmawan/haruno)](https://repl.it/github/FahriAdison/Sad-Multi-Device)
+[![Run on Repl.it](https://repl.it/badge/github/FadliDarmawan/haruno)](https://replit.com)
 ```cmd
 Buka Console
 ------------
@@ -55,17 +55,6 @@ Login with your github
 Click Launch Dev Environment
 Choose your repo
 ```
-
-
----------
-
-## PANEL/RDP/VPS
-
-* Amiruldev [`Click Here`](https://www.amiruldev.my.id)
-
-
----------
-
 
 ## UNTUK PENGGUNA WINDOWS/VPS/RDP
 
