@@ -9,7 +9,7 @@ Segera Hadir
 ------
 
 #### Special Thanks to
-[![Ali](https://github.com/Aulusius.png?size=100)](https://github.com/Alusius)
+[![Ali](https://github.com/Alusius.png?size=100)](https://github.com/Alusius)
 [![Farel](https://github.com/Rlxfly.png?size=100)](https://github.com/Rlxfly)
 [![Johannes](https://github.com/Johannes2803.png?size=100)](https://github.com/Johannes2803)
 
