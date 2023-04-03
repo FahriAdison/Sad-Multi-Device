@@ -1,7 +1,7 @@
 {
     "name": "Sad-Bot",
     "version": "5.0.0",
-    "description": "WhatsApp Bot ESM",
+    "description": "Simple Bot Whatsapp",
     "main": "index.js",
     "type": "module",
     "directories": {
