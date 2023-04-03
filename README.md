@@ -1,5 +1,5 @@
 ------------
-FIXED & UP TO DATE
+DALAM PERBAIKAN
 JIKA INGIN MEMBANTU SILAHKAN CHAT SAYA DI SINI => [![MY WHATSAPP](https://img.shields.io/badge/WA-ME.svg)](https://wa.me/6282268003229)
 ------------
 NEW MODULES:
