@@ -12,6 +12,7 @@ Segera Hadir
 [![Ali](https://github.com/Alusius.png?size=100)](https://github.com/Alusius)
 [![Farel](https://github.com/Rlxfly.png?size=100)](https://github.com/Rlxfly)
 [![Johannes](https://github.com/Johannes2803.png?size=100)](https://github.com/Johannes2803)
+[![YanXiao](https://github.com/ImYanXiao.png?size=100)](https://github.com/ImYanXiao)
 
 ` Yang Telah Membantu Saya Dalam Mengembangkan SC Ini`
 
